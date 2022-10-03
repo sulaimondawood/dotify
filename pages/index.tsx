@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getData } from "../features/musicSlice";
 import Card from "../components/Card";
+import { useRouter } from "next/router";
 import { IReduxData } from "../components/types";
 const Home: NextPage = () => {
   const { data, isLoading } = useSelector(
