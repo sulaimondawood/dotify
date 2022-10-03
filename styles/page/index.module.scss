@@ -1,0 +1,14 @@
+@import "../../styles/components/variable.module.scss";
+
+.home {
+  background-color: $bg-2;
+  width: 100%;
+  height: 100%;
+  padding-top: 4rem;
+  .row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0 2rem;
+    gap: 2rem;
+  }
+}

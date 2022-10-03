@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #181818;
+  font-family: sans-serif;
+  color: #eef2f7;
+}
+
+.active {
+  background-color: #eef2f7;
+}/*# sourceMappingURL=global.css.map */

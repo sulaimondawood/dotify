@@ -1,0 +1,11 @@
+.sidebar_content {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  font-size: 0.9rem;
+  color: #7b818a;
+}
+.sidebar_content .link_route {
+  color: #7b818a;
+  text-decoration: none;
+}/*# sourceMappingURL=sidebarcontent.module.css.map */
