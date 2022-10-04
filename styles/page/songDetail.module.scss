@@ -1,0 +1,34 @@
+@import "../components/variable.module.scss";
+
+.detail_sec {
+  padding: 2rem;
+  background-color: $bg-2;
+  height: 100%;
+
+  .detail_bg {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    // z-index: -100;
+
+    .img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+
+      height: 100%;
+    }
+  }
+  .detail_bg::after {
+    content: "";
+    background-color: $bg;
+    opacity: 0.5;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 1000;
+    display: block;
+  }
+}

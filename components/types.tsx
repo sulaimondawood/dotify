@@ -5,5 +5,15 @@ export interface IReduxData {
   };
   title: string;
   artists: [{}];
-  share?: { subject?: string };
+  share?: any;
+  key?: string | undefined;
+  // url: string;
 }
+
+// export interface Iitem {
+//   img: string | undefined;
+//   title: string | undefined;
+//   desc: string;
+//   key: string;
+//   share?: { subject?: string };
+// }

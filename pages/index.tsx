@@ -7,13 +7,14 @@ import Styles from "../styles/page/index.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getData } from "../features/musicSlice";
+
 import Card from "../components/Card";
-import { useRouter } from "next/router";
 import { IReduxData } from "../components/types";
 const Home: NextPage = () => {
   const { data, isLoading } = useSelector(
     (state: { musicData: { data: []; isLoading: boolean } }) => state.musicData
   );
+  console.log(10);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -30,12 +31,15 @@ const Home: NextPage = () => {
         <div className={Styles.row}>
           {isLoading
             ? "Loading"
-            : data.map((item: any) => {
+            : data.map((item: IReduxData) => {
+                console.log(item?.key);
+
                 return (
                   <Card
                     img={item?.images?.coverart}
                     desc={item.share.subject}
                     title={item?.title}
+                    key={item?.key}
                   />
                 );
               })}
