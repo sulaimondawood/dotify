@@ -9,11 +9,11 @@ const Card = ({
   img: string | undefined;
   title: string | undefined;
   desc: string;
-  key: string | undefined;
+  key: any;
   // url: string;
 }) => {
   return (
-    <Link href={`/song/${key}`}>
+    <Link href={"/song/" + "615447735"}>
       <div className={style.card}>
         <img className={style.card_img} src={img} alt="image" />
         <p className={style.desc}>{desc}</p>

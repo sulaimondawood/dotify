@@ -6,7 +6,7 @@ export interface IReduxData {
   title: string;
   artists: [{}];
   share?: any;
-  key?: string | undefined;
+  key?: string;
   // url: string;
 }
 

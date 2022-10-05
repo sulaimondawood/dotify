@@ -2,14 +2,15 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import SideBar from "../components/SideBar";
 import { FiSearch } from "react-icons/fi";
+import { BsFillPlayCircleFill } from "react-icons/bs";
 import "../features/musicSlice";
 import Styles from "../styles/page/index.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getData } from "../features/musicSlice";
-
-import Card from "../components/Card";
-import { IReduxData } from "../components/types";
+import Link from "next/link";
+// import Card from "../components/Card";
+// import { IReduxData } from "../components/types";
 const Home: NextPage = () => {
   const { data, isLoading } = useSelector(
     (state: { musicData: { data: []; isLoading: boolean } }) => state.musicData
@@ -31,16 +32,31 @@ const Home: NextPage = () => {
         <div className={Styles.row}>
           {isLoading
             ? "Loading"
-            : data.map((item: IReduxData) => {
+            : data.map((item: any) => {
                 console.log(item?.key);
 
                 return (
-                  <Card
-                    img={item?.images?.coverart}
-                    desc={item.share.subject}
-                    title={item?.title}
-                    key={item?.key}
-                  />
+                  // <Card
+                  //   img={item?.images?.coverart}
+                  //   desc={item.share.subject}
+                  //   title={item?.title}
+                  //   key={item?.key}
+                  // />
+                  <Link href={"/song/" + item.key}>
+                    <div className={Styles.card}>
+                      <img
+                        className={Styles.card_img}
+                        src={item?.images?.coverart}
+                        alt="image"
+                      />
+                      <p className={Styles.desc}>{item?.share?.subject}</p>
+                      <div className={Styles.playOver}>
+                        <p className={Styles.playIcon}>
+                          <BsFillPlayCircleFill />
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
                 );
               })}
         </div>

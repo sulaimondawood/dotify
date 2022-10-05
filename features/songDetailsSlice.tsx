@@ -8,7 +8,7 @@ export const getSongDetails = createAsyncThunk(
       const options = {
         method: "GET",
         url: "https://shazam-core.p.rapidapi.com/v1/tracks/details",
-        params: { track_id: "498502624" },
+        params: { track_id: key },
         headers: {
           "X-RapidAPI-Key":
             "cff05d5567msh00c9f291616096ep10c6b0jsn8b1c093fa5eb",
