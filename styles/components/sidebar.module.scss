@@ -1,0 +1,42 @@
+@import "../variable.module.scss";
+.sidebar {
+  flex-basis: 15%;
+  background-color: black;
+  height: 100vh;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+  color: $gray;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  h1 {
+    font-size: 2.3rem;
+    color: greenyellow;
+  }
+
+  &_btns {
+    display: flex;
+    // color: $l-white;
+    color: $gray;
+    align-items: center;
+    gap: 0.7rem;
+
+    .home_logo {
+      font-size: 1.8rem;
+    }
+
+    .logo_text {
+      font-size: 0.9rem;
+    }
+  }
+
+  .hr {
+    border-color: $black;
+  }
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+}

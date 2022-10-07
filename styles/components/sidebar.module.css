@@ -1,0 +1,36 @@
+.sidebar {
+  flex-basis: 15%;
+  background-color: black;
+  height: 100vh;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+  color: #7b818a;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.sidebar h1 {
+  font-size: 2.3rem;
+  color: greenyellow;
+}
+.sidebar_btns {
+  display: flex;
+  color: #7b818a;
+  align-items: center;
+  gap: 0.7rem;
+}
+.sidebar_btns .home_logo {
+  font-size: 1.8rem;
+}
+.sidebar_btns .logo_text {
+  font-size: 0.9rem;
+}
+.sidebar .hr {
+  border-color: #181818;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=sidebar.module.css.map */
